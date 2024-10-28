@@ -2,16 +2,13 @@
 import "./App.css";
 
 function App() {
+  let fooditem=['Dal','Milk','Roti','Green Vegetable','salad','Ghee']
   return (
     // <React.Fragment>
     <>
       <h1>Healthy Food</h1>
       <ul class="list-group">
-        <li class="list-group-item">Dal</li>
-        <li class="list-group-item">Milk</li>
-        <li class="list-group-item">Roti</li>
-        <li class="list-group-item">Green Vegetables</li>
-        <li class="list-group-item">Salad</li>
+        {fooditem.map((item)=>(<li key={item} class="list-group-item">{item}</li> ))}
       </ul>
     </>
     /* </React.Fragment> */
