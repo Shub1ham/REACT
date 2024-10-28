@@ -1,20 +1,18 @@
 // import React from "react";
 import "./App.css";
-
+import Heading from "./component/heading";
+import List from "./component/list";
+import Error from "./component/error_message";
 function App() {
-  // let fooditem=['Dal','Milk','Roti','Green Vegetable','salad','Ghee']
-  let fooditem=[]
+  let fooditem=['Dal','Milk','Roti','Green Vegetable','salad','Ghee']
+  // let fooditem = [];
 
   return (
     // <React.Fragment>
     <>
-      <h1>Healthy Food</h1>
-      {fooditem.length===0 ? <h3>i am still hungry.</h3> : null }    
-      {fooditem===0 && <h3>i am still hungry.</h3> }
-
-      <ul class="list-group">
-        {fooditem.map((item)=>(<li key={item} class="list-group-item">{item}</li> ))}
-      </ul>
+      <Heading />
+      <Error items={fooditem}></Error>
+      <List items={fooditem}></List>
     </>
     /* </React.Fragment> */
   );
