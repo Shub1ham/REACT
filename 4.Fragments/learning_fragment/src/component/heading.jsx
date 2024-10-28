@@ -1,6 +1,6 @@
 let Heading=()=>{
     return (
-      <h1>Healthy Food</h1>
+      <h1 className="head">Healthy Food</h1>
     )
 }
 
