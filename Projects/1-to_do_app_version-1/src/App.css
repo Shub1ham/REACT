@@ -1,0 +1,36 @@
+h1{
+    font-weight: 700;
+    font-size: 40px;
+    margin: 10px;
+    margin-bottom: 80px;
+}
+
+
+input {
+    width: 350px;
+
+}
+
+.col-6{
+    text-align: left;
+}
+
+.col-4{
+    text-align: left;
+}
+
+.col-2{
+    text-align: left;
+}
+
+.item-container{
+    text-align: left;
+}
+
+.todo-row{
+    margin: 10px 5px;
+}
+
+.todo-button{
+    min-width: 100px;
+}
