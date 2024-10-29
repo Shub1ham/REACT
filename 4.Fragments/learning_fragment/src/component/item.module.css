@@ -1,8 +1,12 @@
 .rows {
-  background-color: violet;
+  background-color:white;
 }
 
 .font-size {
   font-weight: 500;
   color: sienna;
+}
+
+.butt{
+  float: right;
 }

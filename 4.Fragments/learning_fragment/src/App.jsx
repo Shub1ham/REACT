@@ -4,6 +4,7 @@ import Heading from "./component/heading";
 import List from "./component/list";
 import Error from "./component/error_message";
 import Container from "./component/Container";
+import Searchbar from "./component/Searchbar";
 function App() {
   let fooditem=['Dal','Milk','Roti','Green Vegetable','salad','Ghee']
   // let fooditem = [];
@@ -14,6 +15,7 @@ function App() {
     <Container>
       <Heading />
       <Error items={fooditem}></Error>
+      <Searchbar></Searchbar>
       <List items={fooditem}></List>
     </Container>
     <Container>
