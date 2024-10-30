@@ -8,14 +8,18 @@ import Searchbar from "./component/Searchbar";
 function App() {
   let fooditem=['Dal','Milk','Roti','Green Vegetable','salad','Ghee']
   // let fooditem = [];
+  let texttodisplay=''
+  const displaychange = (event)=>{console.log(event.target.value);
+     texttodisplay=event.target.value}
 
   return (
     // <React.Fragment>
     <>
     <Container>
-      <Heading />
+      <Heading /> 
       <Error items={fooditem}></Error>
-      <Searchbar></Searchbar>
+      <Searchbar displaychange={displaychange}></Searchbar>
+      <p>{texttodisplay}</p>
       <List items={fooditem}></List>
     </Container>
     <Container>

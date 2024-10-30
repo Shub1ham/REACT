@@ -1,15 +1,12 @@
 import styles from './item.module.css'
 
-let Item = (props) => {
-  const buybuttonclicked=(event)=>{
-    console.log(`${props.fooditems} being bought`)
-  }
+let Item = ({fooditems,handlebuybutton}) => {
   return (
     <li  className={`${styles.rows} list-group-item`}>
-      <span className={`${styles['font-size']}`}>{props.fooditems}</span>
+      <span className={`${styles['font-size']}`}>{fooditems}</span>
       <button className={`${styles.butt}  btn btn-info`}
       
-      onClick={(event)=>buybuttonclicked(event)}
+      onClick={handlebuybutton}
 
       >Buy</button>
     </li>
