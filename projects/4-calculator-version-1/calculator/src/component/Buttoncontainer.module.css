@@ -1,0 +1,13 @@
+.buttflex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.butt{
+    height: 45px;
+    width: 45px;
+    margin: 3px;
+    border-radius: 2px;
+}   
