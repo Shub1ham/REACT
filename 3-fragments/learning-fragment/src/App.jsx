@@ -7,18 +7,26 @@ import Foodinput from "./component/Foodinput";
 
 function App() {
   let fooditems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
+  let texttoshow = "Food item entered by user";
+  const handleonchange = (event) => {
+    {
+      console.log(event.target.value);
+      texttoshow=event.target.value
+    }
+  };
 
   return (
     <>
-    <Container>
-      <h1 className="heading">Healthy Food</h1>
-      <Errormessage items={fooditems}></Errormessage>
-      <Foodinput></Foodinput>
-      <Fooditems items={fooditems}></Fooditems>
-    </Container>
-    <Container>
-      <p>above list of healthy foods that are good</p>
-    </Container>
+      <Container>
+        <h1 className="heading">Healthy Food</h1>
+        <Errormessage items={fooditems}></Errormessage>
+        <Foodinput handleonchange={handleonchange}></Foodinput>
+        <p>{texttoshow}</p>
+        <Fooditems items={fooditems}></Fooditems>
+      </Container>
+      <Container>
+        <p>above list of healthy foods that are good</p>
+      </Container>
     </>
   );
 }

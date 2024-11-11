@@ -1,6 +1,5 @@
 import styles from "./Foodinput.module.css"
-const handleonchange=(event)=>{{console.log(event.target.value)}}
-function Foodinput(){
+function Foodinput({handleonchange}){
    return <input className={styles.foodinput} type="text" placeholder="Enter Here"
    onChange={handleonchange}
    
