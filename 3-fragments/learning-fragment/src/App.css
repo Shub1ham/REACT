@@ -2,5 +2,8 @@
 
 .heading{
   color: blueviolet;
+  text-align: center;
+  font-family: "Doto", sans-serif;
+  font-weight: bold;
 }
 

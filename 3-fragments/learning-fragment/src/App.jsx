@@ -1,17 +1,23 @@
 import Fooditems from "./component/fooditems";
 import Errormessage from "./component/ErrorMessage";
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
+import Container from "./component/Container";
 import "./App.css";
 
 function App() {
-  let fooditems=["Dal","Green Vegetable","Roti","Salad","Milk","Ghee"]
-  
+  let fooditems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
+
   return (
-    <center>
+    <>
+    <Container>
       <h1 className="heading">Healthy Food</h1>
-      <Errormessage items={fooditems}></Errormessage>              
+      <Errormessage items={fooditems}></Errormessage>
       <Fooditems items={fooditems}></Fooditems>
-    </center>
+    </Container>
+    <Container>
+      <p>above list of healthy foods that are good</p>
+    </Container>
+    </>
   );
 }
 
