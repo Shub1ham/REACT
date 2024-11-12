@@ -1,0 +1,9 @@
+.skrow{
+    margin: 7px 3px;
+    align-items: center;
+    padding-left: 300px;
+}
+
+.sk-button{
+    min-width: 80px;
+ }
