@@ -4,14 +4,23 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "./component/Container";
 import "./App.css";
 import Foodinput from "./component/Foodinput";
+import { useState } from "react";
 
 function App() {
-  let fooditems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
-  let texttoshow = "Food item entered by user";
-  const handleonchange = (event) => {
+  // let fooditems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
+
+  // let [texttoshow , settextstate]=useState();  // here are 2 elements that use state holds 1] current value 2] that method or function which we can edith later
+  
+  let [fooditems, setfooditems]= useState([])
+
+  const onkeydown = (event) => {
     {
-      console.log(event.target.value);
-      texttoshow=event.target.value
+      if(event.key==="Enter"){
+        let newfooditem=event.target.value
+        event.target.value=''
+        let newitem=[...fooditems, newfooditem]
+        setfooditems(newitem)
+      }
     }
   };
 
@@ -19,9 +28,8 @@ function App() {
     <>
       <Container>
         <h1 className="heading">Healthy Food</h1>
+        <Foodinput handlekeydown={onkeydown}></Foodinput>
         <Errormessage items={fooditems}></Errormessage>
-        <Foodinput handleonchange={handleonchange}></Foodinput>
-        <p>{texttoshow}</p>
         <Fooditems items={fooditems}></Fooditems>
       </Container>
       <Container>

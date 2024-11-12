@@ -1,7 +1,7 @@
 import styles from "./Foodinput.module.css"
-function Foodinput({handleonchange}){
+function Foodinput({handlekeydown}){
    return <input className={styles.foodinput} type="text" placeholder="Enter Here"
-   onChange={handleonchange}
+   onKeyDown={handlekeydown}
    
    ></input>
 }
