@@ -1,5 +1,6 @@
 import styles from "./Addtodo.module.css"
 import {useState} from "react"
+import { BiMessageAdd } from "react-icons/bi";
 function Addtodo({onnewitem}) {
   const [todoname, settodoname] = useState('');
   const [duedate, setduedate] = useState('');
@@ -37,7 +38,7 @@ function Addtodo({onnewitem}) {
           <button type="button" class={`btn btn-success ${styles["sk-button"]} ${styles.butt}`}
           onClick={handleaddbuttonclick}
           >
-            Add
+            <BiMessageAdd></BiMessageAdd>
           </button>
         </div>
       </div>

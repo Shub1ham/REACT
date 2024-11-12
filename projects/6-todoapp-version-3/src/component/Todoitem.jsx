@@ -1,4 +1,5 @@
 import styles from "./Todoitems.module.css"
+import { MdDelete } from "react-icons/md";
 function Todoitem({todoname , tododate , ondeleteclick}) {
   return (
     <div className="container cen">
@@ -9,7 +10,7 @@ function Todoitem({todoname , tododate , ondeleteclick}) {
           <button type="button" className={`btn btn-danger ${styles["sk-button"]}`}
           onClick={()=>ondeleteclick(todoname)}
           >
-            Delete
+            <MdDelete />
           </button>
         </div>
       </div>
