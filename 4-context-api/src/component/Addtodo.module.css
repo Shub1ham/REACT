@@ -1,0 +1,18 @@
+input{
+    width: 100%;
+    color: black;
+}
+
+.skrow{
+    margin: 7px 3px;
+    align-items: center;
+    padding-left: 300px;
+}
+
+.butt{
+    margin-right: 110px;
+}
+
+.sk-button{
+   min-width: 80px;
+}

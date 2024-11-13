@@ -16,7 +16,7 @@ function App() {
   const [todoitem, setTodoitems] = useState([]);
 
   const handlenewitem=(itemname , itemduedate)=>{
-    const newtodoitem=[...todoitem , {name:itemname,duedate:itemduedate}]
+    const newtodoitem=[...todoitem , {name:itemname,duedate:itemduedate}]  // here ... is a spread oprator
     setTodoitems(newtodoitem)
   }
 
