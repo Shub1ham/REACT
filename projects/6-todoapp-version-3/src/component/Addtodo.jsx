@@ -13,7 +13,8 @@ function Addtodo({onnewitem}) {
     setduedate(event.target.value)
   }
 
-  const handleaddbuttonclick=()=>{
+  const handleaddbuttonclick=(event)=>{
+       event.preventDefault()
        onnewitem(todoname,duedate)
        settodoname("");
        setduedate("");
@@ -22,7 +23,9 @@ function Addtodo({onnewitem}) {
 
   return (
     <div class="container cen">
-      <div class={`row ${styles.skrow}`}>
+      <form class={`row ${styles.skrow}`}
+      onSubmit={handleaddbuttonclick}
+      >
         <div class="col-3">
           <input className={styles.input} type="text" placeholder="Enter Todo Here" value={todoname}
           onChange={handlenamechange}
@@ -35,13 +38,13 @@ function Addtodo({onnewitem}) {
           ></input>
         </div>
         <div class="col-2">
-          <button type="button" class={`btn btn-success ${styles["sk-button"]} ${styles.butt}`}
-          onClick={handleaddbuttonclick}
+          <button type="submit" className={`btn btn-success ${styles["sk-button"]} ${styles.butt}`}
+          // onClick={handleaddbuttonclick}
           >
             <BiMessageAdd></BiMessageAdd>
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
