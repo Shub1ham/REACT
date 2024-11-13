@@ -1,23 +1,19 @@
 import styles from "./Addtodo.module.css"
-import {useState} from "react"
+import { useRef} from "react"
 import { BiMessageAdd } from "react-icons/bi";
 function Addtodo({onnewitem}) {
-  const [todoname, settodoname] = useState('');
-  const [duedate, setduedate] = useState('');
 
-  const handlenamechange=(event)=>{
-    settodoname(event.target.value)
-  }
+  const todonameelement = useRef();
+  const duedateelement = useRef();
 
-  const handledatechange=(event)=>{
-    setduedate(event.target.value)
-  }
 
   const handleaddbuttonclick=(event)=>{
        event.preventDefault()
+       const todoname=todonameelement.current.value;
+       const duedate=duedateelement.current.value;
+       todonameelement.current.value=""
+       duedateelement.current.value=""
        onnewitem(todoname,duedate)
-       settodoname("");
-       setduedate("");
   }
 
 
@@ -27,14 +23,12 @@ function Addtodo({onnewitem}) {
       onSubmit={handleaddbuttonclick}
       >
         <div class="col-3">
-          <input className={styles.input} type="text" placeholder="Enter Todo Here" value={todoname}
-          onChange={handlenamechange}
+          <input className={styles.input} ref={todonameelement} type="text" placeholder="Enter Todo Here" 
           ></input>
         </div>
         <div class="col-3">
           <input type="date"
-          value={duedate}
-          onChange={handledatechange} 
+          ref={duedateelement}
           ></input>
         </div>
         <div class="col-2">
